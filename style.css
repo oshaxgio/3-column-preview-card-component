@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    --Bright-orange:hsl(31, 77%, 52%);
+    --Dark-cyan:hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white:hsla(0, 0%, 100%, 0.75);
+    --Transparent:hsla(0, 0%, 100%, 0);
+    --Very-light-gray:hsl(0, 0%, 95%);
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 920px;
+    background-color: var(--Very-light-gray);
+}
+.container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 307px;
+    max-height: 500px;
+    padding: 30px 50px 50px;
+    position: relative;
+}
+.sedans {
+    background-color: var(--Bright-orange);
+    border-radius: 8px 0 0 8px;
+}
+.suvs {
+    background-color: var(--Dark-cyan);
+}
+.luxury {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 8px 8px 0;
+}
+.image {
+    margin-bottom: 35px;
+}
+.header {
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    color: var(--Transparent-white);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+}
+.content {
+    margin-bottom: 80px;
+    color: var(--Very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    background-color: var(--Transparent-white);
+    border: 3px solid var(--Transparent-white);
+    padding: 20px  35px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 50px;
+    
+}
+.button:hover,
+.button:active {
+    cursor: pointer;
+}
+.sedans .button {
+    color: var(--Bright-orange);
+}
+.sedans .button:hover ,
+.sedans .button:active {
+    color: var(--Transparent-white);
+    border: 3px solid var(--Transparent-white);
+    background-color: var(--Bright-orange);
+}
+.suvs .button {
+    color: var(--Dark-cyan);
+}
+.suvs .button:hover,
+.suvs .button:active {
+    color: var(--Transparent-white);
+    border: 3px solid var(--Transparent-white);
+    background-color: var(--Dark-cyan);
+}
+.luxury .button {
+    color: var(--Very-dark-cyan);
+}
+.luxury .button:hover,
+.luxury .button:active {
+    color: var(--Transparent-white);
+    border: 3px solid var(--Transparent-white);
+    background-color: var(--Very-dark-cyan);
+}
+
+@media (max-width:991px) {
+    .main_container {
+        flex-direction: column;
+        height: 100%;
+    }
+    .container{
+        padding: 30px 30px 50px ;
+    }
+    .button {
+        padding: 10px 40px;
+    }
+    .sedans {
+        border-radius: 8px 8px 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 8px 8px ;
+    }
+}
